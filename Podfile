@@ -7,5 +7,6 @@ target 'FavoriteHotels' do
 
   # Pods for FavoriteHotels
 pod 'RealmSwift'
+pod 'Cosmos'
 
 end
