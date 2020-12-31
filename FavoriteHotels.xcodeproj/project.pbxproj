@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455435677BF9036B0B41C9D6 /* Pods_FavoriteHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9FC641381F214BC6EC07DD /* Pods_FavoriteHotels.framework */; };
 		E34B97F7259E042900F721B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B97F6259E042900F721B8 /* AppDelegate.swift */; };
 		E34B97F9259E042900F721B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B97F8259E042900F721B8 /* SceneDelegate.swift */; };
 		E34B97FB259E042900F721B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B97FA259E042900F721B8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		762E15314574939AAE3C99E7 /* Pods-FavoriteHotels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteHotels.release.xcconfig"; path = "Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels.release.xcconfig"; sourceTree = "<group>"; };
 		E34B97F3259E042900F721B8 /* FavoriteHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B97F6259E042900F721B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E34B97F8259E042900F721B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		E34B97FF259E042E00F721B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E34B9802259E042E00F721B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34B9804259E042E00F721B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37E672FEDB56E837218FF88 /* Pods-FavoriteHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteHotels.debug.xcconfig"; path = "Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels.debug.xcconfig"; sourceTree = "<group>"; };
+		EA9FC641381F214BC6EC07DD /* Pods_FavoriteHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoriteHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455435677BF9036B0B41C9D6 /* Pods_FavoriteHotels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA40BD7B39A154729CD1B7AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E37E672FEDB56E837218FF88 /* Pods-FavoriteHotels.debug.xcconfig */,
+				762E15314574939AAE3C99E7 /* Pods-FavoriteHotels.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E34B97EA259E042900F721B8 = {
 			isa = PBXGroup;
 			children = (
 				E34B97F5259E042900F721B8 /* FavoriteHotels */,
 				E34B97F4259E042900F721B8 /* Products */,
+				CA40BD7B39A154729CD1B7AA /* Pods */,
+				FAAC2BE35CEE990EF34E2782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = FavoriteHotels;
 			sourceTree = "<group>";
 		};
+		FAAC2BE35CEE990EF34E2782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA9FC641381F214BC6EC07DD /* Pods_FavoriteHotels.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E34B9807259E042E00F721B8 /* Build configuration list for PBXNativeTarget "FavoriteHotels" */;
 			buildPhases = (
+				6AA5521D38862365A8B8E79C /* [CP] Check Pods Manifest.lock */,
 				E34B97EF259E042900F721B8 /* Sources */,
 				E34B97F0259E042900F721B8 /* Frameworks */,
 				E34B97F1259E042900F721B8 /* Resources */,
+				9B6A46937FB48992332132A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AA5521D38862365A8B8E79C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FavoriteHotels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B6A46937FB48992332132A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E34B97EF259E042900F721B8 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		E34B9808259E042E00F721B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37E672FEDB56E837218FF88 /* Pods-FavoriteHotels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		E34B9809259E042E00F721B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 762E15314574939AAE3C99E7 /* Pods-FavoriteHotels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
