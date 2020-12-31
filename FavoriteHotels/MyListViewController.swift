@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MyListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
