@@ -8,7 +8,10 @@
 import UIKit
 
 class SectionTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var answerTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
