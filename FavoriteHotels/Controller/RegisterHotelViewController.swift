@@ -16,4 +16,12 @@ class RegisterHotelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func didTapSaveButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCancelButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
