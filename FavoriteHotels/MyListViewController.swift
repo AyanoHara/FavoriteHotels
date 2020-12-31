@@ -31,6 +31,10 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func setUpTableview() {
         tableView.delegate = self
         tableView.dataSource = self
