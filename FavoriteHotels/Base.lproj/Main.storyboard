@@ -54,6 +54,21 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
         </scene>
+        <!--Register New Hotel View Controller-->
+        <scene sceneID="TDF-5W-efQ">
+            <objects>
+                <viewController id="5Iz-xV-InQ" customClass="RegisterNewHotelViewController" customModule="FavoriteHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ml-uN-mt1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EKY-vV-ZSS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSR-mg-FcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="94"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7KC-dh-wQT">
             <objects>
