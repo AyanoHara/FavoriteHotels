@@ -42,7 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="登録したホテル" id="Dgx-gZ-udl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="w2G-79-zyY">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="5Iz-xV-InQ" kind="presentation" id="qcC-dR-o70"/>
                             </connections>
@@ -65,9 +65,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6y-w7-p3e">
-                                <rect key="frame" x="0.0" y="64" width="414" height="761"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6y-w7-p3e">
+                                <rect key="frame" x="0.0" y="62" width="414" height="780"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="3Zg-QW-g2c">
@@ -80,23 +79,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-3S-A8t">
-                                <rect key="frame" x="20" y="16" width="30" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-3S-A8t">
+                                <rect key="frame" x="16" y="16" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="hZF-lv-pDc"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="xmark.circle" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-Su-gpg">
-                                <rect key="frame" x="266" y="16" width="128" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98591953519999997" green="0.50742834810000004" blue="0.44544196130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-Su-gpg">
+                                <rect key="frame" x="366" y="16" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="2O7-rg-M2p"/>
+                                </constraints>
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EKY-vV-ZSS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EKY-vV-ZSS" firstAttribute="trailing" secondItem="oYz-Su-gpg" secondAttribute="trailing" constant="16" id="2Q9-uB-Vnw"/>
+                            <constraint firstItem="A6y-w7-p3e" firstAttribute="top" secondItem="LAb-3S-A8t" secondAttribute="bottom" constant="16" id="2ob-Ps-Lq7"/>
+                            <constraint firstItem="A6y-w7-p3e" firstAttribute="top" secondItem="oYz-Su-gpg" secondAttribute="bottom" constant="16" id="7Uw-q5-sXg"/>
+                            <constraint firstItem="LAb-3S-A8t" firstAttribute="top" secondItem="EKY-vV-ZSS" secondAttribute="top" constant="16" id="SIo-yQ-cqM"/>
+                            <constraint firstItem="A6y-w7-p3e" firstAttribute="leading" secondItem="EKY-vV-ZSS" secondAttribute="leading" id="iLn-eO-uKD"/>
+                            <constraint firstItem="oYz-Su-gpg" firstAttribute="top" secondItem="EKY-vV-ZSS" secondAttribute="top" constant="16" id="kRp-Va-7LC"/>
+                            <constraint firstItem="LAb-3S-A8t" firstAttribute="leading" secondItem="EKY-vV-ZSS" secondAttribute="leading" constant="16" id="oRP-m2-scA"/>
+                            <constraint firstItem="A6y-w7-p3e" firstAttribute="trailing" secondItem="EKY-vV-ZSS" secondAttribute="trailing" id="riF-4u-v0R"/>
+                            <constraint firstAttribute="bottom" secondItem="A6y-w7-p3e" secondAttribute="bottom" id="sPc-uv-QE6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="LAb-3S-A8t" id="9gw-Lf-zqC"/>
@@ -116,7 +129,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TfS-Qn-THI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
