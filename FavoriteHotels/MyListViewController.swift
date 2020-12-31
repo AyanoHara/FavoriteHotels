@@ -14,5 +14,26 @@ class MyListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTableview()
+    }
+}
+
+//MARK: - TableView
+extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hotelListCell", for: indexPath) as! HotelListTableViewCell
+        
+        return cell
+    }
+    
+    func setUpTableview() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        let myListNib = UINib(nibName: "HotelListTableViewCell", bundle: nil)
+        tableView.register(myListNib, forCellReuseIdentifier: "hotelListCell")
     }
 }
