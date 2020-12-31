@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterNewHotelViewController: UIViewController {
+class RegisterHotelViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
