@@ -90,24 +90,56 @@
 		E34B97F5259E042900F721B8 /* FavoriteHotels */ = {
 			isa = PBXGroup;
 			children = (
+				E34B9840259E4E3200F721B8 /* Model */,
+				E34B9841259E4E3D00F721B8 /* View */,
+				E34B9842259E4E5200F721B8 /* Controller */,
 				E34B97F6259E042900F721B8 /* AppDelegate.swift */,
 				E34B97F8259E042900F721B8 /* SceneDelegate.swift */,
-				E34B97FA259E042900F721B8 /* MyListViewController.swift */,
-				E34B9811259E127900F721B8 /* RegisterNewHotelViewController.swift */,
+				E34B9804259E042E00F721B8 /* Info.plist */,
+			);
+			path = FavoriteHotels;
+			sourceTree = "<group>";
+		};
+		E34B9840259E4E3200F721B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E34B9841259E4E3D00F721B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E34B9843259E4E8000F721B8 /* Cell */,
 				E34B97FC259E042900F721B8 /* Main.storyboard */,
 				E34B97FF259E042E00F721B8 /* Assets.xcassets */,
 				E34B9801259E042E00F721B8 /* LaunchScreen.storyboard */,
-				E34B9804259E042E00F721B8 /* Info.plist */,
-				E34B9822259E318800F721B8 /* SectionTableViewCell.swift */,
-				E34B9823259E318800F721B8 /* SectionTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E34B9842259E4E5200F721B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E34B97FA259E042900F721B8 /* MyListViewController.swift */,
+				E34B9811259E127900F721B8 /* RegisterNewHotelViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E34B9843259E4E8000F721B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				E34B982C259E37EF00F721B8 /* HotelListTableViewCell.swift */,
 				E34B982D259E37EF00F721B8 /* HotelListTableViewCell.xib */,
+				E34B9822259E318800F721B8 /* SectionTableViewCell.swift */,
+				E34B9823259E318800F721B8 /* SectionTableViewCell.xib */,
 				E34B9831259E440700F721B8 /* DatePickerTableViewCell.swift */,
 				E34B9832259E440700F721B8 /* DatePickerTableViewCell.xib */,
 				E34B9836259E456000F721B8 /* RatingStarTableViewCell.swift */,
 				E34B9837259E456000F721B8 /* RatingStarTableViewCell.xib */,
 			);
-			path = FavoriteHotels;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FAAC2BE35CEE990EF34E2782 /* Frameworks */ = {
