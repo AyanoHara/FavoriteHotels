@@ -17,20 +17,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="324" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホテル名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmQ-Nz-0of">
-                        <rect key="frame" x="12" y="8" width="300" height="21.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホテルの名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmQ-Nz-0of">
+                        <rect key="frame" x="12" y="8" width="300" height="22"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksE-TW-T8j">
-                        <rect key="frame" x="12" y="33.5" width="200" height="18"/>
+                        <rect key="frame" x="12" y="34" width="200" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円 / 泊" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-jF-eNw">
-                        <rect key="frame" x="262" y="33.5" width="50" height="18"/>
+                        <rect key="frame" x="262" y="34" width="50" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Ad3-JT-5XY"/>
                         </constraints>
@@ -39,11 +39,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV6-6P-KKi" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="12" y="55.5" width="300" height="22.5"/>
+                        <rect key="frame" x="12" y="56" width="300" height="22"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojs-Lg-XpT">
-                        <rect key="frame" x="216" y="33.5" width="42" height="18"/>
+                        <rect key="frame" x="216" y="34" width="42" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

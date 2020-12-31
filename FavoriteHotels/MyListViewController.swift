@@ -21,6 +21,7 @@ class MyListViewController: UIViewController {
 //MARK: - TableView
 extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //レイアウト確認のため３を返してるが、本来は登録されているホテルの数
         return 3
     }
     
