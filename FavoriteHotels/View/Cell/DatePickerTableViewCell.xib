@@ -17,23 +17,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaT-YR-LyM">
-                        <rect key="frame" x="12" y="8" width="467" height="21"/>
+                        <rect key="frame" x="32" y="8" width="427" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-hO-5MV">
-                        <rect key="frame" x="12" y="33" width="467" height="128"/>
+                        <rect key="frame" x="32" y="33" width="427" height="128"/>
                     </datePicker>
                 </subviews>
                 <constraints>
                     <constraint firstItem="EaT-YR-LyM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FCl-io-PCW"/>
                     <constraint firstAttribute="bottom" secondItem="iaE-hO-5MV" secondAttribute="bottom" constant="8" id="FJz-Go-Eki"/>
-                    <constraint firstAttribute="trailing" secondItem="iaE-hO-5MV" secondAttribute="trailing" constant="12" id="UwN-Ee-hDf"/>
-                    <constraint firstItem="iaE-hO-5MV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="cmk-hS-pzD"/>
+                    <constraint firstAttribute="trailing" secondItem="iaE-hO-5MV" secondAttribute="trailing" constant="32" id="UwN-Ee-hDf"/>
+                    <constraint firstItem="iaE-hO-5MV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="cmk-hS-pzD"/>
                     <constraint firstItem="iaE-hO-5MV" firstAttribute="top" secondItem="EaT-YR-LyM" secondAttribute="bottom" constant="4" id="eT5-fI-A6g"/>
-                    <constraint firstAttribute="trailing" secondItem="EaT-YR-LyM" secondAttribute="trailing" constant="12" id="kIU-6r-343"/>
-                    <constraint firstItem="EaT-YR-LyM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="sg7-We-L3r"/>
+                    <constraint firstAttribute="trailing" secondItem="EaT-YR-LyM" secondAttribute="trailing" constant="32" id="kIU-6r-343"/>
+                    <constraint firstItem="EaT-YR-LyM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="sg7-We-L3r"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

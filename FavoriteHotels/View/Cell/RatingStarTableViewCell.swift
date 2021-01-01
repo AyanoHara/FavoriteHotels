@@ -15,9 +15,16 @@ class RatingStarTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    var titleText: String = "" {
+        didSet {
+            titleLabel.text = titleText
+        }
     }
 }
