@@ -18,23 +18,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4R-Y3-1wL">
-                        <rect key="frame" x="12" y="8" width="366" height="21"/>
+                        <rect key="frame" x="32" y="8" width="326" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rZ-eZ-2xv" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="12" y="33" width="366" height="24"/>
+                        <rect key="frame" x="32" y="33" width="326" height="24"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="a4R-Y3-1wL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Dtr-eM-dvW"/>
+                    <constraint firstItem="a4R-Y3-1wL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Dtr-eM-dvW"/>
                     <constraint firstAttribute="bottom" secondItem="9rZ-eZ-2xv" secondAttribute="bottom" constant="8" id="S8I-f1-PSe"/>
-                    <constraint firstAttribute="trailing" secondItem="a4R-Y3-1wL" secondAttribute="trailing" constant="12" id="a6z-ez-gse"/>
-                    <constraint firstItem="9rZ-eZ-2xv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="b1J-6P-zoB"/>
+                    <constraint firstAttribute="trailing" secondItem="a4R-Y3-1wL" secondAttribute="trailing" constant="32" id="a6z-ez-gse"/>
+                    <constraint firstItem="9rZ-eZ-2xv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="b1J-6P-zoB"/>
                     <constraint firstItem="a4R-Y3-1wL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pCO-F5-IMn"/>
-                    <constraint firstAttribute="trailing" secondItem="9rZ-eZ-2xv" secondAttribute="trailing" constant="12" id="pjz-Hg-QV1"/>
+                    <constraint firstAttribute="trailing" secondItem="9rZ-eZ-2xv" secondAttribute="trailing" constant="32" id="pjz-Hg-QV1"/>
                     <constraint firstItem="9rZ-eZ-2xv" firstAttribute="top" secondItem="a4R-Y3-1wL" secondAttribute="bottom" constant="4" id="xOw-y0-VVW"/>
                 </constraints>
             </tableViewCellContentView>
