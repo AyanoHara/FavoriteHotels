@@ -21,7 +21,7 @@ class RegisterHotelViewController: UIViewController {
         case url
         case ratingStar
         
-        var title: String? {
+        var title: String {
             switch self {
             case .name: return "ホテルの名前"
             case .location: return "場所"
@@ -62,16 +62,22 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
         
         switch cellType {
         case .name:
+            sectionCell.titleText = RegisterHotelType.name.title
             return sectionCell
         case .location:
+            sectionCell.titleText = RegisterHotelType.location.title
             return sectionCell
         case .price:
+            sectionCell.titleText = RegisterHotelType.price.title
             return sectionCell
         case .date:
+            datePickerCell.titleText = RegisterHotelType.date.title
             return datePickerCell
         case .url:
+            sectionCell.titleText = RegisterHotelType.url.title
             return sectionCell
         case .ratingStar:
+            ratingStarCell.titleText = RegisterHotelType.ratingStar.title
             return ratingStarCell
         }
     }
