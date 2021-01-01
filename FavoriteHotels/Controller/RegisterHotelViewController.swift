@@ -85,13 +85,12 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
     func setUpTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         let sectionNib = UINib(nibName: "SectionTableViewCell", bundle: nil)
         tableView.register(sectionNib, forCellReuseIdentifier: "sectionCell")
-        
         let datePickerNib = UINib(nibName: "DatePickerTableViewCell", bundle: nil)
         tableView.register(datePickerNib, forCellReuseIdentifier: "datePickerCell")
-        
         let ratingStarNib = UINib(nibName: "RatingStarTableViewCell", bundle: nil)
         tableView.register(ratingStarNib, forCellReuseIdentifier: "ratingStarCell")
     }

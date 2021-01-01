@@ -27,7 +27,6 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotelListCell", for: indexPath) as! HotelListTableViewCell
-        
         return cell
     }
     
@@ -38,6 +37,7 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
     func setUpTableview() {
         tableView.delegate = self
         tableView.dataSource = self
+        
         let myListNib = UINib(nibName: "HotelListTableViewCell", bundle: nil)
         tableView.register(myListNib, forCellReuseIdentifier: "hotelListCell")
     }
