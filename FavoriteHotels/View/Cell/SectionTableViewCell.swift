@@ -15,6 +15,7 @@ class SectionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        answerTextField.delegate = self
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +26,16 @@ class SectionTableViewCell: UITableViewCell {
         didSet {
             titleLabel.text = titleText
         }
+    }
+}
+
+//MARK: - TextFieldDelegate
+extension SectionTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.contentView.endEditing(true)
     }
 }
