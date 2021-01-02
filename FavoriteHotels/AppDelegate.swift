@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Realmの保存先URL
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         do {
         let realm = try Realm()
         } catch {
