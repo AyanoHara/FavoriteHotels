@@ -39,8 +39,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV6-6P-KKi" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="12" y="56" width="300" height="22"/>
+                        <rect key="frame" x="12" y="56" width="120" height="22"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="fpF-wd-Axm"/>
+                        </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojs-Lg-XpT">
                         <rect key="frame" x="216" y="34" width="42" height="18"/>
@@ -60,7 +63,6 @@
                     <constraint firstItem="zmQ-Nz-0of" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="a2D-6N-FbZ"/>
                     <constraint firstItem="OV6-6P-KKi" firstAttribute="top" secondItem="ksE-TW-T8j" secondAttribute="bottom" constant="4" id="cUt-PS-vPX"/>
                     <constraint firstItem="zmQ-Nz-0of" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cVp-fP-Nho"/>
-                    <constraint firstAttribute="trailing" secondItem="OV6-6P-KKi" secondAttribute="trailing" constant="12" id="cjG-Rg-hD9"/>
                     <constraint firstItem="ojs-Lg-XpT" firstAttribute="leading" secondItem="ksE-TW-T8j" secondAttribute="trailing" constant="4" id="fys-fF-4jX"/>
                     <constraint firstItem="Pa2-jF-eNw" firstAttribute="leading" secondItem="ojs-Lg-XpT" secondAttribute="trailing" constant="4" id="gBw-Ni-HOU"/>
                     <constraint firstItem="ksE-TW-T8j" firstAttribute="top" secondItem="zmQ-Nz-0of" secondAttribute="bottom" constant="4" id="jbE-71-XUI"/>
@@ -77,11 +79,6 @@
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </tableViewCell>
     </objects>
-    <designables>
-        <designable name="OV6-6P-KKi">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
