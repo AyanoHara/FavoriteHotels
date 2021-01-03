@@ -24,8 +24,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rZ-eZ-2xv" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="32" y="33" width="326" height="24"/>
+                        <rect key="frame" x="32" y="33" width="120" height="24"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="11N-wG-jvx"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -34,7 +37,6 @@
                     <constraint firstAttribute="trailing" secondItem="a4R-Y3-1wL" secondAttribute="trailing" constant="32" id="a6z-ez-gse"/>
                     <constraint firstItem="9rZ-eZ-2xv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="b1J-6P-zoB"/>
                     <constraint firstItem="a4R-Y3-1wL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pCO-F5-IMn"/>
-                    <constraint firstAttribute="trailing" secondItem="9rZ-eZ-2xv" secondAttribute="trailing" constant="32" id="pjz-Hg-QV1"/>
                     <constraint firstItem="9rZ-eZ-2xv" firstAttribute="top" secondItem="a4R-Y3-1wL" secondAttribute="bottom" constant="4" id="xOw-y0-VVW"/>
                 </constraints>
             </tableViewCellContentView>
@@ -46,11 +48,6 @@
             <point key="canvasLocation" x="191.30434782608697" y="32.477678571428569"/>
         </tableViewCell>
     </objects>
-    <designables>
-        <designable name="9rZ-eZ-2xv">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
