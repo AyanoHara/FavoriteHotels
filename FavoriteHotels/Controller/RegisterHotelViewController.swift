@@ -14,7 +14,9 @@ class RegisterHotelViewController: UIViewController {
     var price: String?
     var date: String?
     var url: String?
-    var ratingStar: Int?
+    var ratingStar: Double?
+    
+    var ratingCell = RatingStarTableViewCell()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -35,11 +37,13 @@ class RegisterHotelViewController: UIViewController {
     
     func showSaveAlert() {
         let alert = UIAlertController(title: "内容を保存", message: "この内容でよろしいですか？", preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "OK", style: .default) { _ in
-            print(self.name)
-            print(self.location)
-            print(self.price)
-            print(self.url)
+        let saveAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
+            ratingStar = ratingCell.result
+            print(name)
+            print(location)
+            print(price)
+            print(url)
+            print(ratingStar)
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
@@ -58,7 +62,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionCell = tableView.dequeueReusableCell(withIdentifier: "sectionCell", for: indexPath) as! SectionTableViewCell
         let  datePickerCell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as! DatePickerTableViewCell
-        let ratingStarCell = tableView.dequeueReusableCell(withIdentifier: "ratingStarCell", for: indexPath) as! RatingStarTableViewCell
+        ratingCell = tableView.dequeueReusableCell(withIdentifier: "ratingStarCell", for: indexPath) as! RatingStarTableViewCell
         
         guard let cellType = RegisterHotelType(rawValue: indexPath.row) else { return UITableViewCell() }
         
@@ -85,8 +89,8 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
             sectionCell.cellType = .url
             return sectionCell
         case .ratingStar:
-            ratingStarCell.titleText = RegisterHotelType.ratingStar.title
-            return ratingStarCell
+            ratingCell.titleText = RegisterHotelType.ratingStar.title
+            return ratingCell
         }
     }
     

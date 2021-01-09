@@ -10,12 +10,17 @@ import Cosmos
 
 class RatingStarTableViewCell: UITableViewCell {
     
+    var result = 0.0
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingStarView: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        ratingStarView.didTouchCosmos = { rating in
+            self.result = rating
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
