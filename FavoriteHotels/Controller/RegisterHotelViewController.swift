@@ -17,6 +17,7 @@ class RegisterHotelViewController: UIViewController {
     var ratingStar: Double?
     
     var ratingCell = RatingStarTableViewCell()
+    var datePickerCell = DatePickerTableViewCell()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -39,9 +40,11 @@ class RegisterHotelViewController: UIViewController {
         let alert = UIAlertController(title: "内容を保存", message: "この内容でよろしいですか？", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
             ratingStar = ratingCell.result
+            date = datePickerCell.date
             print(name)
             print(location)
             print(price)
+            print(date)
             print(url)
             print(ratingStar)
             self.dismiss(animated: true, completion: nil)
@@ -61,7 +64,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionCell = tableView.dequeueReusableCell(withIdentifier: "sectionCell", for: indexPath) as! SectionTableViewCell
-        let  datePickerCell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as! DatePickerTableViewCell
+        datePickerCell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as! DatePickerTableViewCell
         ratingCell = tableView.dequeueReusableCell(withIdentifier: "ratingStarCell", for: indexPath) as! RatingStarTableViewCell
         
         guard let cellType = RegisterHotelType(rawValue: indexPath.row) else { return UITableViewCell() }
