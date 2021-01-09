@@ -9,29 +9,16 @@ import UIKit
 
 class RegisterHotelViewController: UIViewController {
     
+    var name: String?
+    var location: String?
+    var price: String?
+    var date: String?
+    var url: String?
+    var ratingStar: Int?
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    
-    enum RegisterHotelType: Int, CaseIterable {
-        case name
-        case location
-        case price
-        case date
-        case url
-        case ratingStar
-        
-        var title: String {
-            switch self {
-            case .name: return "ホテルの名前"
-            case .location: return "場所"
-            case .price: return "値段 (円/泊)"
-            case .date: return "チェックインした日付"
-            case .url: return "ホテルのURL"
-            case .ratingStar: return "評価"
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +26,26 @@ class RegisterHotelViewController: UIViewController {
     }
     
     @IBAction func didTapSaveButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        showSaveAlert()
     }
     
     @IBAction func didTapCancelButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func showSaveAlert() {
+        let alert = UIAlertController(title: "内容を保存", message: "この内容でよろしいですか？", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print(self.name)
+            print(self.location)
+            print(self.price)
+            print(self.url)
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -60,21 +62,27 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
         
         guard let cellType = RegisterHotelType(rawValue: indexPath.row) else { return UITableViewCell() }
         
+        sectionCell.delegate = self
+        
         switch cellType {
         case .name:
             sectionCell.titleText = RegisterHotelType.name.title
+            sectionCell.cellType = .name
             return sectionCell
         case .location:
             sectionCell.titleText = RegisterHotelType.location.title
+            sectionCell.cellType = .location
             return sectionCell
         case .price:
             sectionCell.titleText = RegisterHotelType.price.title
+            sectionCell.cellType = .price
             return sectionCell
         case .date:
             datePickerCell.titleText = RegisterHotelType.date.title
             return datePickerCell
         case .url:
             sectionCell.titleText = RegisterHotelType.url.title
+            sectionCell.cellType = .url
             return sectionCell
         case .ratingStar:
             ratingStarCell.titleText = RegisterHotelType.ratingStar.title
@@ -93,5 +101,20 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
         tableView.register(datePickerNib, forCellReuseIdentifier: "datePickerCell")
         let ratingStarNib = UINib(nibName: "RatingStarTableViewCell", bundle: nil)
         tableView.register(ratingStarNib, forCellReuseIdentifier: "ratingStarCell")
+    }
+}
+
+// MARK: -Protocol
+extension RegisterHotelViewController: SectionTableViewCellDelegate {
+    //TFの値を取得するため
+    func fetchTFValue(textField: UITextField, cellType: RegisterHotelType) {
+        switch cellType {
+        case .name: name = textField.text
+        case .location: location = textField.text
+        case .price: price = textField.text
+        case .date: break
+        case .url: url = textField.text
+        case .ratingStar: break
+        }
     }
 }

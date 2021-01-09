@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol SectionTableViewCellDelegate {
+    //TFの値を取得するため
+    func fetchTFValue(textField: UITextField, cellType: RegisterHotelType)
+}
+
 class SectionTableViewCell: UITableViewCell {
+    
+    var delegate: SectionTableViewCellDelegate?
+    var cellType: RegisterHotelType?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var answerTextField: UITextField!
@@ -37,5 +45,10 @@ extension SectionTableViewCell: UITextFieldDelegate {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.contentView.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let cellType = cellType else { return }
+        delegate?.fetchTFValue(textField: textField, cellType: cellType)
     }
 }
