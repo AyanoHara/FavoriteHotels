@@ -27,6 +27,14 @@ class DatePickerTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func didChangeDatePicker(_ sender: UIDatePicker) {
+        // 日付のフォーマット
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日"
+        date  = "\(formatter.string(from: datePicker.date))"
+        print(date)
+    }
+    
     var titleText: String = "" {
         didSet {
             titleLabel.text = titleText

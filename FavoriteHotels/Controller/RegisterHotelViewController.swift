@@ -6,18 +6,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegisterHotelViewController: UIViewController {
     
+    var hotelDataArray = [HotelDataModel]()
     var name: String?
     var location: String?
     var price: String?
     var date: String?
     var url: String?
     var ratingStar: Double?
-    
     var ratingCell = RatingStarTableViewCell()
-    var datePickerCell = DatePickerTableViewCell()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -26,6 +26,7 @@ class RegisterHotelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        print(hotelDataArray)
     }
     
     @IBAction func didTapSaveButton(_ sender: UIButton) {
@@ -40,13 +41,14 @@ class RegisterHotelViewController: UIViewController {
         let alert = UIAlertController(title: "内容を保存", message: "この内容でよろしいですか？", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
             ratingStar = ratingCell.result
-            date = datePickerCell.date
             print(name)
             print(location)
             print(price)
             print(date)
             print(url)
             print(ratingStar)
+            
+            saveHotelData()
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
@@ -64,7 +66,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionCell = tableView.dequeueReusableCell(withIdentifier: "sectionCell", for: indexPath) as! SectionTableViewCell
-        datePickerCell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as! DatePickerTableViewCell
+        let datePickerCell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as! DatePickerTableViewCell
         ratingCell = tableView.dequeueReusableCell(withIdentifier: "ratingStarCell", for: indexPath) as! RatingStarTableViewCell
         
         guard let cellType = RegisterHotelType(rawValue: indexPath.row) else { return UITableViewCell() }
@@ -86,6 +88,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
             return sectionCell
         case .date:
             datePickerCell.titleText = RegisterHotelType.date.title
+            date = datePickerCell.date
             return datePickerCell
         case .url:
             sectionCell.titleText = RegisterHotelType.url.title
@@ -122,6 +125,25 @@ extension RegisterHotelViewController: SectionTableViewCellDelegate {
         case .date: break
         case .url: url = textField.text
         case .ratingStar: break
+        }
+    }
+}
+
+//MARK: - RealmSwiftMethods
+
+extension RegisterHotelViewController {
+    func saveHotelData() {
+        let realm = try! Realm()
+        let hotelData = HotelDataModel()
+        hotelData.name = name ?? ""
+        hotelData.location = location ?? ""
+        hotelData.price = price ?? ""
+        hotelData.date = date ?? ""
+        hotelData.url = url ?? ""
+        hotelData.ratingStar = ratingStar ?? 0.0
+        
+        try! realm.write {
+            realm.add(hotelData)
         }
     }
 }
