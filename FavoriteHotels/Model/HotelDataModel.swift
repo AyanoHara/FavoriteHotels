@@ -14,5 +14,5 @@ class HotelDataModel: Object {
     @objc dynamic var price: String = ""
     @objc dynamic var date: String = ""
     @objc dynamic var url: String = ""
-    @objc dynamic var ratingStar: Double = 0.0
+    @objc dynamic var ratingStar: Double = 1.0
 }
