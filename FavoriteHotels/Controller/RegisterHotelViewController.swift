@@ -143,8 +143,13 @@ extension RegisterHotelViewController {
         hotelData.url = url ?? ""
         hotelData.ratingStar = ratingStar ?? 0.0
         
-        try! realm.write {
-            realm.add(hotelData)
+        do {
+            try realm.write {
+                realm.add(hotelData)
+            }
+        } catch {
+            print("Error saving category \(error)")
         }
+        tableView.reloadData()
     }
 }
