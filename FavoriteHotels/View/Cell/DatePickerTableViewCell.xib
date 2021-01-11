@@ -17,13 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaT-YR-LyM">
-                        <rect key="frame" x="32" y="8" width="427" height="21"/>
+                        <rect key="frame" x="32" y="8" width="427" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-hO-5MV">
-                        <rect key="frame" x="32" y="33" width="427" height="128"/>
+                    <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-hO-5MV">
+                        <rect key="frame" x="32" y="41" width="427" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="M3b-OP-OwS"/>
+                        </constraints>
+                        <connections>
+                            <action selector="didChangeDatePicker:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Hfn-8o-An9"/>
+                        </connections>
                     </datePicker>
                 </subviews>
                 <constraints>
