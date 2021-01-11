@@ -134,11 +134,11 @@ extension RegisterHotelViewController: SectionTableViewCellDelegate {
 extension RegisterHotelViewController {
     func saveHotelData(hotelData: HotelDataModel) {
         let realm = try! Realm()
-        hotelData.name = name ?? ""
-        hotelData.location = location ?? ""
-        hotelData.price = price ?? ""
-        hotelData.date = date ?? ""
-        hotelData.url = url ?? ""
+        hotelData.name = name ?? "-----"
+        hotelData.location = location ?? "-----"
+        hotelData.price = price ?? "-----"
+        hotelData.date = date ?? "-----"
+        hotelData.url = url ?? "-----"
         hotelData.ratingStar = ratingStar ?? 0.0
         
         do {
