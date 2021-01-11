@@ -10,13 +10,6 @@ import RealmSwift
 
 class MyListViewController: UIViewController {
     
-    //DBから取得した値を保持
-    var name: String?
-    var location: String?
-    var price: String?
-    var date: String?
-    var url: String?
-    var ratingStar: Double?
     var hotels: Results<HotelDataModel>?
     
     @IBOutlet weak var tableView: UITableView!
@@ -39,6 +32,10 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotelListCell", for: indexPath) as! HotelListTableViewCell
+        let hotelData = self.hotels?[(indexPath as NSIndexPath).row];
+        cell.hotelNameLabel.text = hotelData?.name
+        cell.locationLabel.text = "場所 : \(hotelData?.location ?? "")"
+        cell.priceLabel.text = hotelData?.price
         return cell
     }
     
@@ -58,8 +55,6 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: - RealmSwiftMethods
 extension MyListViewController {
     func fetchHotelData() {
-        // Realmインスタンスの作成.
-        let filePath = Realm.Configuration.defaultConfiguration.fileURL
         let realm = try! Realm()
         hotels = realm.objects(HotelDataModel.self)
         tableView.reloadData()

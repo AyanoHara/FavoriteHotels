@@ -146,7 +146,7 @@ extension RegisterHotelViewController {
                 realm.add(hotelData)
             }
         } catch {
-            print("Error saving category \(error)")
+            print("Error saving data \(error)")
         }
         tableView.reloadData()
     }
