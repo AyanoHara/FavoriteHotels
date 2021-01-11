@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
@@ -21,17 +21,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
-        mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
         mapView.showsUserLocation = true
-        
-        // 縮尺を設定
+        setUpMapRegion()
+    }
+}
+
+//MARK: - MapMethods
+extension MapViewController {
+    //縮尺を設定
+    func setUpMapRegion() {
         var region:MKCoordinateRegion = mapView.region
         region.center = mapView.userLocation.coordinate
-        
         region.span.latitudeDelta = 0.02
         region.span.longitudeDelta = 0.02
-        
         mapView.setRegion(region,animated:true)
     }
 }
