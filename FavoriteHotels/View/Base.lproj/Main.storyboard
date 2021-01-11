@@ -79,6 +79,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="近くのホテル" id="3Z9-pX-FQm"/>
+                    <connections>
+                        <outlet property="mapView" destination="7Ch-iL-zuM" id="ebY-iF-aqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umm-fp-wL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
