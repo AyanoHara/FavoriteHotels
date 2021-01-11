@@ -18,6 +18,7 @@ class RegisterHotelViewController: UIViewController {
     var url: String?
     var ratingStar: Double?
     var ratingCell = RatingStarTableViewCell()
+    var newHotelData = HotelDataModel()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -26,7 +27,6 @@ class RegisterHotelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
-        print(hotelDataArray)
     }
     
     @IBAction func didTapSaveButton(_ sender: UIButton) {
@@ -47,8 +47,9 @@ class RegisterHotelViewController: UIViewController {
             print(date)
             print(url)
             print(ratingStar)
-            
-            saveHotelData()
+            hotelDataArray.append(newHotelData)
+            saveHotelData(hotelData: newHotelData)
+            print(hotelDataArray)
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
@@ -133,9 +134,8 @@ extension RegisterHotelViewController: SectionTableViewCellDelegate {
 //MARK: - RealmSwiftMethods
 
 extension RegisterHotelViewController {
-    func saveHotelData() {
+    func saveHotelData(hotelData: HotelDataModel) {
         let realm = try! Realm()
-        let hotelData = HotelDataModel()
         hotelData.name = name ?? ""
         hotelData.location = location ?? ""
         hotelData.price = price ?? ""

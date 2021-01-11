@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //Realmの保存先URL
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+        let filePath = Realm.Configuration.defaultConfiguration.fileURL
+        print(filePath)
         //マイグレーション処理
         var config = Realm.Configuration(
             schemaVersion: 2,
