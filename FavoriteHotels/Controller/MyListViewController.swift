@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MyListViewController: UIViewController {
+    
+    var hotels: Results<HotelDataModel>?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addHotelBarButtonItem: UIBarButtonItem!
@@ -16,17 +19,23 @@ class MyListViewController: UIViewController {
         super.viewDidLoad()
         setUpTableview()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        fetchHotelData()
+    }
 }
 
 //MARK: - TableView
 extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //レイアウト確認のため３を返してるが、本来は登録されているホテルの数
-        return 3
+        return hotels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotelListCell", for: indexPath) as! HotelListTableViewCell
+        let hotelData = self.hotels?[(indexPath as NSIndexPath).row];
+        cell.hotelNameLabel.text = hotelData?.name
+        cell.locationLabel.text = "場所 : \(hotelData?.location ?? "")"
+        cell.priceLabel.text = hotelData?.price
         return cell
     }
     
@@ -40,5 +49,14 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
         
         let myListNib = UINib(nibName: "HotelListTableViewCell", bundle: nil)
         tableView.register(myListNib, forCellReuseIdentifier: "hotelListCell")
+    }
+}
+
+//MARK: - RealmSwiftMethods
+extension MyListViewController {
+    func fetchHotelData() {
+        let realm = try! Realm()
+        hotels = realm.objects(HotelDataModel.self)
+        tableView.reloadData()
     }
 }
