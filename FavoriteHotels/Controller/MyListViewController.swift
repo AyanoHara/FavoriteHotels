@@ -17,8 +17,6 @@ class MyListViewController: UIViewController {
     var date: String?
     var url: String?
     var ratingStar: Double?
-    
-    var hotelDataArray = [HotelDataModel]()
     var hotels: Results<HotelDataModel>?
     
     @IBOutlet weak var tableView: UITableView!
@@ -64,12 +62,6 @@ extension MyListViewController {
         let filePath = Realm.Configuration.defaultConfiguration.fileURL
         let realm = try! Realm()
         hotels = realm.objects(HotelDataModel.self)
-        if let obj = hotels?.last {
-//            name = hotels
-//            location = hotels?.
-//          
-        }
-        
         tableView.reloadData()
     }
 }

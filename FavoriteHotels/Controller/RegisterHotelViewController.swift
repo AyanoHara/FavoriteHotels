@@ -47,9 +47,7 @@ class RegisterHotelViewController: UIViewController {
             print(date)
             print(url)
             print(ratingStar)
-            hotelDataArray.append(newHotelData)
             saveHotelData(hotelData: newHotelData)
-            print(hotelDataArray)
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
