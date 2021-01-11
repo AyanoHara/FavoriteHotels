@@ -60,7 +60,7 @@
         <!--近くのホテル-->
         <scene sceneID="7c3-zp-7z2">
             <objects>
-                <viewController id="yaj-fa-KDd" sceneMemberID="viewController">
+                <viewController id="yaj-fa-KDd" customClass="MapViewController" customModule="FavoriteHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dyt-If-KZX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,25 +142,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSR-mg-FcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4482.608695652174" y="-227.00892857142856"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7KC-dh-wQT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uB-Tg-jRs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TfS-Qn-THI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bDS-8o-WZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="238" y="-227"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i7W-aE-j9f">
