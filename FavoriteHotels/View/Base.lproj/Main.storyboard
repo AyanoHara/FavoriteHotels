@@ -64,8 +64,19 @@
                     <view key="view" contentMode="scaleToFill" id="Dyt-If-KZX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-iL-zuM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lcn-yO-oFL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ch-iL-zuM" firstAttribute="trailing" secondItem="lcn-yO-oFL" secondAttribute="trailing" id="55y-o7-rN2"/>
+                            <constraint firstItem="7Ch-iL-zuM" firstAttribute="leading" secondItem="lcn-yO-oFL" secondAttribute="leading" id="Npl-QP-KeK"/>
+                            <constraint firstItem="7Ch-iL-zuM" firstAttribute="bottom" secondItem="lcn-yO-oFL" secondAttribute="bottom" id="W0K-tJ-z1E"/>
+                            <constraint firstItem="7Ch-iL-zuM" firstAttribute="top" secondItem="lcn-yO-oFL" secondAttribute="top" id="wAy-Jv-QV0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="近くのホテル" id="3Z9-pX-FQm"/>
                 </viewController>
