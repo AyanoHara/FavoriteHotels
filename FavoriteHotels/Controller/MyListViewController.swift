@@ -36,6 +36,7 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.hotelNameLabel.text = hotelData?.name
         cell.locationLabel.text = "場所 : \(hotelData?.location ?? "")"
         cell.priceLabel.text = hotelData?.price
+        cell.ratingStarView.settings.updateOnTouch = false
         return cell
     }
     
