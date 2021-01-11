@@ -10,7 +10,7 @@ import Cosmos
 
 class RatingStarTableViewCell: UITableViewCell {
     
-    var result = 0.0
+    var result = 1.0
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingStarView: CosmosView!
@@ -18,6 +18,7 @@ class RatingStarTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        ratingStarView.rating = 1.0
         ratingStarView.didTouchCosmos = { rating in
             self.result = rating
         }

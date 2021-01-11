@@ -139,7 +139,7 @@ extension RegisterHotelViewController {
         hotelData.price = price ?? "-----"
         hotelData.date = date ?? "-----"
         hotelData.url = url ?? "-----"
-        hotelData.ratingStar = ratingStar ?? 0.0
+        hotelData.ratingStar = ratingStar ?? 1.0
         
         do {
             try realm.write {
