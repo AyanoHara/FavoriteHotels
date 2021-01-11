@@ -85,6 +85,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
         case .price:
             sectionCell.titleText = RegisterHotelType.price.title
             sectionCell.cellType = .price
+            sectionCell.setNumberKeyboard()
             return sectionCell
         case .date:
             datePickerCell.titleText = RegisterHotelType.date.title

@@ -35,6 +35,11 @@ class SectionTableViewCell: UITableViewCell {
             titleLabel.text = titleText
         }
     }
+    
+    func setNumberKeyboard() {
+        //キーボードを数字のみにする
+        answerTextField.keyboardType = .numberPad
+    }
 }
 
 //MARK: - TextFieldDelegate
