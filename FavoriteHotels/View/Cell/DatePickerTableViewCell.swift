@@ -29,11 +29,9 @@ class DatePickerTableViewCell: UITableViewCell {
     }
     
     @IBAction func didChangeDatePicker(_ sender: UIDatePicker) {
-        // 日付のフォーマット
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
         dateString  = formatter.string(from: datePicker.date)
-        print(dateString)
         delegate?.fetchDatePickerValue(datePicker: datePicker, dateString: dateString ?? "-----")
     }
     

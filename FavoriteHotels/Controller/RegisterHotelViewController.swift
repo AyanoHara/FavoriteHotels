@@ -89,7 +89,6 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
             return sectionCell
         case .date:
             datePickerCell.titleText = RegisterHotelType.date.title
-//            date = datePickerCell.date
             return datePickerCell
         case .url:
             sectionCell.titleText = RegisterHotelType.url.title
