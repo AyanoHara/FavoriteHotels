@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol DatePickerTableViewCellDelegate {
+    func fetchDatePickerValue(datePicker: UIDatePicker, dateString: String)
+}
+
 class DatePickerTableViewCell: UITableViewCell {
     
     var date: String?
+    var delegate: DatePickerTableViewCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -17,10 +22,6 @@ class DatePickerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        // 日付のフォーマット
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy年MM月dd日"
-        date = "\(formatter.string(from: datePicker.date))"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,8 +32,9 @@ class DatePickerTableViewCell: UITableViewCell {
         // 日付のフォーマット
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
-        date  = "\(formatter.string(from: datePicker.date))"
+        date  = formatter.string(from: datePicker.date)
         print(date)
+        delegate?.fetchDatePickerValue(datePicker: datePicker, dateString: date ?? "-----")
     }
     
     var titleText: String = "" {
