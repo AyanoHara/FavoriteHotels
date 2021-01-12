@@ -71,6 +71,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
         guard let cellType = RegisterHotelType(rawValue: indexPath.row) else { return UITableViewCell() }
         
         sectionCell.delegate = self
+        datePickerCell.delegate = self
         
         switch cellType {
         case .name:
@@ -88,7 +89,6 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
             return sectionCell
         case .date:
             datePickerCell.titleText = RegisterHotelType.date.title
-            date = datePickerCell.date
             return datePickerCell
         case .url:
             sectionCell.titleText = RegisterHotelType.url.title
@@ -115,7 +115,7 @@ extension RegisterHotelViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 // MARK: -Protocol
-extension RegisterHotelViewController: SectionTableViewCellDelegate {
+extension RegisterHotelViewController: SectionTableViewCellDelegate, DatePickerTableViewCellDelegate {
     //TFの値を取得するため
     func fetchTFValue(textField: UITextField, cellType: RegisterHotelType) {
         switch cellType {
@@ -126,6 +126,11 @@ extension RegisterHotelViewController: SectionTableViewCellDelegate {
         case .url: url = textField.text
         case .ratingStar: break
         }
+    }
+    
+    //datePickerの値を取得するため
+    func fetchDatePickerValue(datePicker: UIDatePicker, dateString: String) {
+        date = dateString
     }
 }
 
