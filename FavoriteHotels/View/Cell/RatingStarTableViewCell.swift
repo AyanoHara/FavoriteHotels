@@ -19,6 +19,7 @@ class RatingStarTableViewCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         ratingStarView.rating = 1.0
+        ratingStarView.settings.starSize = 40
         ratingStarView.didTouchCosmos = { rating in
             self.result = rating
         }
