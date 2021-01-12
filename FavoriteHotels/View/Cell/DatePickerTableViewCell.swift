@@ -13,7 +13,7 @@ protocol DatePickerTableViewCellDelegate {
 
 class DatePickerTableViewCell: UITableViewCell {
     
-    var date: String?
+    var dateString: String?
     var delegate: DatePickerTableViewCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,9 +32,9 @@ class DatePickerTableViewCell: UITableViewCell {
         // 日付のフォーマット
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
-        date  = formatter.string(from: datePicker.date)
-        print(date)
-        delegate?.fetchDatePickerValue(datePicker: datePicker, dateString: date ?? "-----")
+        dateString  = formatter.string(from: datePicker.date)
+        print(dateString)
+        delegate?.fetchDatePickerValue(datePicker: datePicker, dateString: dateString ?? "-----")
     }
     
     var titleText: String = "" {
