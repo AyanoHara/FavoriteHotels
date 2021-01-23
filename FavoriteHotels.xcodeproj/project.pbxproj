@@ -24,8 +24,8 @@
 		E34B9838259E456000F721B8 /* RatingStarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B9836259E456000F721B8 /* RatingStarTableViewCell.swift */; };
 		E34B9839259E456000F721B8 /* RatingStarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E34B9837259E456000F721B8 /* RatingStarTableViewCell.xib */; };
 		E34B9876259F1EE300F721B8 /* HotelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B9875259F1EE300F721B8 /* HotelDataModel.swift */; };
+		E36BF31E25BBEFBE00894C57 /* RegisterHotelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF31D25BBEFBE00894C57 /* RegisterHotelType.swift */; };
 		E39B9F8425AC9B3D00299A32 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39B9F8325AC9B3D00299A32 /* MapViewController.swift */; };
-		E3A2365425AA101000411E63 /* RegisterHotelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2365325AA101000411E63 /* RegisterHotelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,9 +48,9 @@
 		E34B9836259E456000F721B8 /* RatingStarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarTableViewCell.swift; sourceTree = "<group>"; };
 		E34B9837259E456000F721B8 /* RatingStarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingStarTableViewCell.xib; sourceTree = "<group>"; };
 		E34B9875259F1EE300F721B8 /* HotelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDataModel.swift; sourceTree = "<group>"; };
+		E36BF31D25BBEFBE00894C57 /* RegisterHotelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHotelType.swift; sourceTree = "<group>"; };
 		E37E672FEDB56E837218FF88 /* Pods-FavoriteHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteHotels.debug.xcconfig"; path = "Target Support Files/Pods-FavoriteHotels/Pods-FavoriteHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		E39B9F8325AC9B3D00299A32 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		E3A2365325AA101000411E63 /* RegisterHotelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterHotelType.swift; path = ../../../../Downloads/BuildingListsAndNavigation/StartingPoint/Landmarks/RegisterHotelType.swift; sourceTree = "<group>"; };
 		EA9FC641381F214BC6EC07DD /* Pods_FavoriteHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoriteHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E34B9875259F1EE300F721B8 /* HotelDataModel.swift */,
-				E3A2365325AA101000411E63 /* RegisterHotelType.swift */,
+				E36BF31D25BBEFBE00894C57 /* RegisterHotelType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 				E34B9812259E127900F721B8 /* RegisterHotelViewController.swift in Sources */,
 				E34B9838259E456000F721B8 /* RatingStarTableViewCell.swift in Sources */,
 				E34B982E259E37EF00F721B8 /* HotelListTableViewCell.swift in Sources */,
-				E3A2365425AA101000411E63 /* RegisterHotelType.swift in Sources */,
 				E34B97F7259E042900F721B8 /* AppDelegate.swift in Sources */,
 				E34B9824259E318800F721B8 /* SectionTableViewCell.swift in Sources */,
+				E36BF31E25BBEFBE00894C57 /* RegisterHotelType.swift in Sources */,
 				E34B9833259E440700F721B8 /* DatePickerTableViewCell.swift in Sources */,
 				E34B97F9259E042900F721B8 /* SceneDelegate.swift in Sources */,
 			);
